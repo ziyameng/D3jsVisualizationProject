@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid Data visualization</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/map.css" />
+    <link rel="stylesheet" href="css/bubble_chart.css" />
+    <link rel="stylesheet" href="css/race_bar.css" />
+    <!-- Load d3.js chart:map -->
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <section class="hero">
+      <h1>Visualizing COVID-19</h1>
+      <h2>
+        An Interactive Dashboard Exploring the Global Impact of the Pandemic
+      </h2>
+      <div class="hero-intro">
+        <p>
+          Welcome to our interactive dashboard which is designed to provide you
+          with a comprehensive understanding of the global impact of the
+          COVID-19 pandemic through a series of visually engaging and
+          interactive charts.
+        </p>
+        <p>
+          Our goal is to help you explore the spread of COVID-19, its effects on
+          various countries, and the impact of vaccination efforts across
+          different regions.
+        </p>
+      </div>
+      <h3>
+        Get started by reading the detailed descriptions of our visualizations
+        and interactive features. Happy exploring!
+      </h3>
+    </section>
+    <section class="section-1">
+      <div id="chart1-container">
+        <div class="map">
+          <div class="intro-map">
+            <h2>Global COVID-19 Cases</h2>
+
+            <p>
+              To read and interact with the map, area, and line chart
+              visualizations:
+            </p>
+
+            <p>
+              1. Identify the countries with high or low Covid-19 cases number
+              based on color intensity<br />
+              2. Observe the area chart to evaluate overall patterns and
+              trends<br />
+              3. Specify a time range by using the brush<br />
+              4. Examine the line chart to determine the trends in deaths over
+              time and compare it to trends in total cases
+            </p>
+          </div>
+          <div class="map-area" id="map-area">
+            <svg id="map" width="800" height="600"></svg>
+            <svg id="map-legend" width="200" height="200"></svg>
+          </div>
+        </div>
+        <div class="line-area">
+          <div class="intro-line-area">
+            <p>
+              Specify a time range by using the brush. Drag a time range here 👉
+            </p>
+          </div>
+          <svg id="linearea" width="600" height="150"></svg>
+          <div id="totaldeath"></div>
+        </div>
+      </div>
+      <div class="copyright">Copyright 2013-2021 Mike Bostock</div>
+    </section>
+    <section class="section-2">
+      <div id="chart2-container">
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+        <div class="bubble-content">
+          <h2>COVID-19 Vaccination Progress by Country and Continent</h2>
+          <div id="my_dataviz"></div>
+
+          <div class="intro-bubble">
+            <p>
+              1. Read Instruction:<br />
+              This bubble chart shows the progress of COVID-19 vaccinations
+              across different continents. Each bubble represents a country, and
+              the size of the bubble indicates the country's population. The
+              color of the bubble represents the continent the country belongs
+              to.
+              <br />
+              <br />
+              2. Interactive instruction:<br />
+              2.1 Hover over a bubble to see more information about the country,
+              including its total population, vaccinations, and vaccinations per
+              person. <br />
+              2.2 You can also hover over the legend on the right to highlight
+              countries from a specific continent.
+            </p>
+          </div>
+        </div>
+        <div class="copyright">Copyright © the d3 graph gallery 2018</div>
+      </div>
+    </section>
+    <section class="section-3">
+      <div id="chart3-container">
+        <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+        <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+        <div class="intro-race-bar">
+          <h2>COVID-19 New Cases by Country</h2>
+          <p>
+            1. Interactive Instruction: <br />Click the "Restart" button to
+            restart the animation, showing the progression of monthly new
+            COVID-19 cases by country. <br />
+            2. Read Instruction:<br />
+            The top 10 countries with the highest number of cases will be
+            displayed.
+          </p>
+        </div>
+        <div class="race-bar-chart">
+          <div id="chartdiv"></div>
+          <button id="restartButton">Restart</button>
+        </div>
+      </div>
+      <div class="copyright">Copyright © 2006-2023, amCharts</div>
+    </section>
+    <script src="js/map.js"></script>
+    <script src="js/bubble_chart.js"></script>
+    <script src="js/race_bar.js"></script>
+  </body>
+</html>

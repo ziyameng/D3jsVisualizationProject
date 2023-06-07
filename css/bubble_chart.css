@@ -1,0 +1,14 @@
+/* Reference: https://d3-graph-gallery.com/graph/bubble_template.html */
+.bubbles {
+  stroke-width: 0.5px;
+  stroke: black;
+  opacity: 0.8;
+}
+.bubbles:hover {
+  stroke-width: 1.5px;
+  stroke: black;
+}
+
+.tooltip {
+  position: absolute;
+}

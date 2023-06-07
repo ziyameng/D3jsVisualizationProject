@@ -1,0 +1,44 @@
+.tooltip,
+.tooltipdeath {
+  padding: 20px;
+  background: lightsteelblue;
+  color: black;
+  border-radius: 5px;
+}
+
+#chart1-container {
+  position: relative;
+}
+
+.map-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.intro-map {
+  padding-left: 50px;
+}
+
+#totaldeath {
+  display: inline-block;
+}
+.line-area {
+  display: flex;
+  justify-content: center;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.intro-line-area {
+  height: 100px;
+  width: 300px;
+}
+
+.map {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
